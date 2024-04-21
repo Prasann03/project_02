@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Based Mediguard</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* Light gray background */
+            color: #333; /* Dark text for better readability on light background */
+        }
+
+        header, nav {
+            background-color: #F9629F; /* Blue header and navigation background */
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #main-content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff; /* White content background */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: #333; /* Dark text for better readability on white background */
+        }
+
+        #search-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        #search-input {
+            width: 70%; /* Adjust the width as needed */
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px 0 0 5px;
+        }
+
+        #search-button {
+            padding: 10px 20px;
+            background-color: #4CAF50; /* Green button background */
+            color: #fff; /* White button text */
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+
+        #scanner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #ecf0f1; /* Light background for scanner */
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        #user-input-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50; /* Green button background */
+            color: #fff; /* White button text */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #chatbot {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #F9629F; /* Blue background for chatbot */
+            color: #fff;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        #robot-image {
+            width: 50px; /* Adjust the width of the robot image */
+            margin-right: 20px;
+        }
+
+        #user-input-textfield {
+            flex: 1; /* Take up remaining space in the flex container */
+            margin-right: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        #scanner-placeholder {
+            width: 150px; /* Adjust the width of the scanner placeholder */
+            height: 150px; /* Adjust the height of the scanner placeholder */
+            background-color: #ddd; /* Gray placeholder background */
+            border: 1px solid #999; /* Border color for the placeholder */
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>AI Based Mediguard</h1>
+    </header>
+
+    <nav>
+        <!-- Navigation links go here -->
+        <a href="#">Home</a> |
+        <a href="#">About</a> |
+        <a href="#">Contact</a>
+    </nav>
+
+    <div id="main-content">
+        <!-- Main content goes here -->
+
+        <div id="search-bar">
+            <!-- Search bar and button go here -->
+            <input id="search-input" type="text" placeholder="Search...">
+            <button id="search-button">Search</button>
+        </div>
+
+        <div id="scanner">
+            <!-- Scanner content goes here -->
+            <button id="scanButton" onclick="activateScanner()">Use Scanner</button>
+            <img id="scanner-placeholder" src="https://cdn.osxdaily.com/wp-content/uploads/2022/04/qr-code-example.jpg" alt="Scanner Image">
+        </div>
+
+        <div id="user-input-buttons">
+            <!-- User input buttons go here -->
+            <button onclick="storeAndRedirect()">Manually Enter Medicine</button>
+            
+        </div>
+
+        <div id="chatbot">
+            <!-- AI Chatbot content goes here -->
+            <img id="robot-image" src="https://t4.ftcdn.net/jpg/05/47/26/33/360_F_547263397_sylHi4aJQoB6eLkFT97f5UUOZVtqESQh.jpg" alt="Robot Image">
+            <input id="user-input-textfield" type="text" placeholder="Write your message...">
+            <button>Send</button>
+        </div>
+
+    </div>
+
+    <script>
+        function activateScanner() {
+            // Add logic to activate the scanner and show the result
+            // For illustration purposes, using a placeholder image
+            document.getElementById('scanner-placeholder').src = "path/to/functional-scanner-image.jpg";
+          }  document.getElementById('scanResultButton').style.display = 'block';
+	function storeAndRedirect() {
+            // Store information (you can use localStorage, cookies, or other methods)
+            // For example, using localStorage:
+            localStorage.setItem('userInput', document.getElementById('search-input').value);
+
+            // Redirect to another HTML file after storing information
+            window.location.href = '{%url "info"%}';
+        
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Based Mediguard</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F9629F;
+            color: #333; 
+        }
+
+        header {
+            background-color: #F9629F; 
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #main-content {
+            display:flex;
+            flex-direction: column;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	    color: #333;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #F9629F;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+	.button-container {
+    	   text-align: center;
+	}
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+	.medicine-images {
+           display: flex;
+           justify-content: space-around;
+           align-items: center; 
+           
+	}
+	.medicine-images img {
+    	   max-width: 100px; 
+           height: 100px;
+           object-fit: cover;
+    	   border-radius: 5px;
+    	   margin: 10px;
+	}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h2>AI Based Mediguard</h2>
+        <p>Empowering you with Medication Information</p>
+    </header>
+    <div id="main-content">
+        <h3>Welcome to AI Based Mediguard</h3>
+        <p>Explore over-the-counter medication information, track your medication history, and get guidance in case of overdose. Our information is sourced from the DrugBank database, a standard database preferred by professionals in the field.</p>
+        <p>Start your journey to better health!</p>
+	<div class="medicine-images">
+            <img src="https://img.freepik.com/free-vector/hand-drawn-pill-cartoon-illustration_23-2150622781.jpg" alt="Medicine 1">
+	    <img src="https://img.freepik.com/free-vector/appointment-booking-concept_23-2148556900.jpg?size=626&ext=jpg&ga=GA1.1.1826414947.1699488000&semt=ais" alt="Medicine 2">
+	     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRvvvsgg4OC1K-TKRT8DXApLCTmOqcLEfU3Q&usqp=CAU" alt="Medicine 3">
+            
+        </div>
+        <button id="getStartedBtn">Get Started</button>
+        
+    </div>
+
+    <footer>
+        &copy; 2023 AI Based Mediguard. All rights reserved.
+    </footer>
+
+    
+	<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var getStartedBtn = document.getElementById('getStartedBtn');
+
+            getStartedBtn.addEventListener('click', function () {
+                // Redirect to the next page (replace 'nextPage.html' with your actual next page)
+                window.location.href = '{% url "Disclaimer"%}';
+            });
+        });
+    </script>
+
+</body>
+</html>

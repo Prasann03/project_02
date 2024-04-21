@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disclaimer</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            text-align: center; /* Center-align text in the body */
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px; /* Add some space below the title */
+        }
+
+        p {
+            text-align: left; /* Left-align paragraphs */
+            line-height: 1.5;
+            color: #555;
+            max-width: 600px; /* Set a maximum width for better readability */
+            margin: 0 auto; /* Center-align paragraphs within the specified max-width */
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="main-content">
+    	<h1>Disclaimer</h1>
+
+    	<p>This app is intended for informational purposes only and is designed to provide information about over-the-counter (OTC) medications. It is not a substitute for professional medical advice, diagnosis, or treatment. Users should consult with healthcare professionals for advice regarding prescription medications. If the app detects any signs of medication overdose, it will provide guidance to the user on appropriate actions to take. This guidance is not a replacement for emergency medical services.The app may also assist healthcare professionals by providing medication history information. It is crucial for users to keep their medication records updated and accurate for this feature to be effective.</p>
+<p>The information provided in this app is sourced from the DrugBank database, a standard database preferred by professionals in the field. While we strive to ensure the accuracy of the information, users are encouraged to verify details with other reliable sources and consult healthcare professionals for personalized advice.</p>
+    </div>
+
+
+    <br><br>
+    <button id="acknowledgeBtn" onclick="redirectToNextPage()">I Acknowledge</button>
+    
+
+    <script>
+
+document.addEventListener('DOMContentLoaded', function () {
+    var acknowledgeBtn = document.getElementById('acknowledgeBtn');
+
+    acknowledgeBtn.addEventListener('click', function () {
+        // Redirect to the next page (replace 'nextPage.html' with your actual next page)
+        window.location.href = '{% url "searching"%}';
+    });
+});
+</script>
+
+    
+</body>
+</html>
